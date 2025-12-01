@@ -102,9 +102,9 @@
 .fish1 {
   position: absolute;
   bottom: 10vh;
-  width: var(--fish-w);
-  max-width: 10vw;
-  z-index: 4;
+   width: calc(var(--fish-w) * 1.2);
+  max-width: max-content;
+  z-index: 2;
   left: calc(-1 * var(--off-fish1));
   animation: fish1 12s linear infinite;
   cursor: pointer;
@@ -124,8 +124,8 @@
 .fish2 {
   position: absolute;
   bottom: 20vh;
-  width: var(--fish-w);
-  max-width: 10vw;
+  width: calc(var(--fish-w) * 1.3);
+  max-width: max-content;
   z-index: 3;
   left: calc(-1 * var(--off-fish2));
   animation: fish2 18s linear infinite;
@@ -146,8 +146,8 @@
 .fish3 {
   position: absolute;
   bottom: 35vh;
-  width: var(--fish-w);
-  max-width: 10vw;
+  width: calc(var(--fish-w) * 1.4);
+  max-width: max-content;
   z-index: 1;
   right: calc(-1 * var(--off-fish3));
   animation: fish3 25s linear infinite;
@@ -168,7 +168,7 @@
 .fish4 {
   position: absolute;
   bottom: 60vh;
-  width: calc(var(--fish-w) * 2);
+  width: calc(var(--fish-w) * 1.85);
   max-width: 30vw;
   z-index: 3;
   right: calc(-1 * var(--off-fish4));
@@ -212,7 +212,7 @@
 .fish6 {
   position: absolute;
   bottom: 75vh;
-  width: var(--fish-w);
+  width: calc(var(--fish-w) * 1.6);
   max-width: max-content;
   z-index: 3;
   left: calc(-1 * var(--off-fish6));
@@ -232,13 +232,11 @@
 /* Seaweed */
 .fish7 {
   position: absolute;
-  bottom: 10vh;
-  width: calc(var(--fish-w) * 1.5);
+  bottom: 13vh;
+  width: calc(var(--fish-w) * 1.7);
   max-width: max-content;
-  z-index: 2;
-  left: 48vw; /* fast position indenfor #game */
-  animation: none; /* fjernet animation — står stille */
-  cursor: pointer;
+  z-index: 3;
+  left: 42vw;
 }
 
 /* ---------------------------------------------------------
@@ -247,7 +245,7 @@
 .aquaman {
   position: fixed;
   bottom: -55px;
-  left: -10px;
+  left: -20px;
   width: 575px;
   max-width: 50vw;
   height: auto;
