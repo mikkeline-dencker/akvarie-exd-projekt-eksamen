@@ -98,7 +98,7 @@
    - vw/vh til placering og ALLE animationsafstande
 --------------------------------------------------------- */
 
-/* Crab: Mathilde */
+/* Crab */
 .fish1 {
   position: absolute;
   bottom: 10vh;
@@ -120,7 +120,7 @@
   }
 }
 
-/* Nemo: Yulia */
+/* Nemo */
 .fish2 {
   position: absolute;
   bottom: 20vh;
@@ -142,7 +142,7 @@
   }
 }
 
-/* Pufferfish: Mikkeline*/
+/* Pufferfish */
 .fish3 {
   position: absolute;
   bottom: 35vh;
@@ -164,7 +164,7 @@
   }
 }
 
-/* Shark: Cecilie */
+/* Shark */
 .fish4 {
   position: absolute;
   bottom: 60vh;
@@ -186,7 +186,7 @@
   }
 }
 
-/* Stingray: Mathilde */
+/* Stingray */
 .fish5 {
   position: absolute;
   bottom: 50vh;
@@ -208,7 +208,7 @@
   }
 }
 
-/* Turtle; Cecilie */
+/* Turtle */
 .fish6 {
   position: absolute;
   bottom: 75vh;
@@ -229,7 +229,7 @@
     transform: translateX(calc(100vw + var(--off-fish6)));
   }
 }
-/* Seaweed: Mathilde */
+/* Seaweed */
 .fish7 {
   position: absolute;
   bottom: 10vh;
@@ -238,6 +238,20 @@
   z-index: 2;
   left: 48vw; /* fast position indenfor #game */
   animation: none; /* fjernet animation — står stille */
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------
+   Aquaman styling
+--------------------------------------------------------- */
+.aquaman {
+  position: fixed;
+  bottom: -55px;
+  left: -10px;
+  width: 575px;
+  max-width: 50vw;
+  height: auto;
+  z-index: 10;
   cursor: pointer;
 }
 
@@ -251,7 +265,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.35); /* overlay */
-  z-index: 9999;
+  z-index: 9;
   padding: 1.25rem;
 }
 
