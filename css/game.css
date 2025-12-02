@@ -15,12 +15,14 @@
 }
 
 #game {
-  /* lag: først billede (øverst), så gradient (bagved) */
-  background-image: url("../img/gamebg.png"),
+  /* baggrundsbillede over gradient (samme rækkefølge) */
+  background-image: url("../img/gamebg.svg"),
     linear-gradient(to bottom right, var(--color-water2), var(--color-water1));
   background-position: center center, center center;
   background-repeat: no-repeat, no-repeat;
-  background-size: 120vw auto;
+  /* cover udfylder hele viewport */
+  background-size: cover, cover;
+
   width: 100%;
   min-height: 100vh;
   margin: 0;
