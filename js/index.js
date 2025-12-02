@@ -128,7 +128,7 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
   });
 });
 
-// Akvariemandens boble
+//
 const aquaman = document.getElementById("aquaman");
 const cta = document.querySelector(".aquaman-cta");
 const bubble = document.getElementById("aquamanBubble");

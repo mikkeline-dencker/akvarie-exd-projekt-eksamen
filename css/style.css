@@ -68,7 +68,7 @@ z-index: 0;
 /* Crab */
 .fish1 {
   position: absolute;
-  bottom: 10vh;
+  bottom: 3.5vh;
   width: calc(var(--fish-w) * 1.2);
   max-width: max-content;
   z-index: 2;
@@ -112,7 +112,7 @@ z-index: 0;
 /* Pufferfish */
 .fish3 {
   position: absolute;
-  bottom: 35vh;
+  bottom: 45vh;
   width: calc(var(--fish-w) * 1.4);
   max-width: max-content;
   z-index: 1;
@@ -273,7 +273,7 @@ z-index: 0;
   transform: translateX(-50%);
   border-width: 10px;
   border-style: solid;
-  border-color: #f0f0f0 transparent transparent transparent;
+  border-color: #f7f7f7 transparent transparent transparent;
 }
 
 /* ---------------------------------------------------------
