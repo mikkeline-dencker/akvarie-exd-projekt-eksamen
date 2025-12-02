@@ -5,7 +5,7 @@
   /* Farver */
   --color-water1: #1d5a77;
   --color-water2: #44b9f1;
-  --color-orange: #FFC968;
+  --color-orange: #ffc968;
 
   /* Billede størrelser (px) */
   --fish-w: 200px;
@@ -103,7 +103,7 @@
 .fish1 {
   position: absolute;
   bottom: 10vh;
-   width: calc(var(--fish-w) * 1.2);
+  width: calc(var(--fish-w) * 1.2);
   max-width: max-content;
   z-index: 2;
   left: calc(-1 * var(--off-fish1));
@@ -243,42 +243,44 @@
 /* ---------------------------------------------------------
    Aquaman styling
 --------------------------------------------------------- */
-.aquaman { 
-  position: absolute; 
-  width: 40vw; 
-  bottom: 2vh; 
-  left: 0vw; 
-  z-index: 5; 
-  cursor: pointer; 
-} 
-
-.aquaman-cta { 
-  font-weight: bold; 
-  position: absolute; 
-  bottom: 56vh; 
-  left: 15vw; 
-  font-family: var(--font-body2); 
-  font-size: 1.8rem; 
-  color: var(--color-orange); 
-  cursor: pointer; 
-  z-index: 6; 
-  
-  /* Tynd stroke */ 
-  text-shadow: 
-  -1px -1px 0 #fba55c, 
-  1px -1px 0 #fba55c, 
-  -1px 1px 0 #fba55c, 
-  1px 1px 0 #fba55c; 
-
-  /* Animation for at tiltrække opmærksomhed */ 
-  display: inline-block; 
-  animation: pulse-scale 1.6s ease-in-out infinite; 
+.aquaman {
+  position: absolute;
+  width: 40vw;
+  bottom: 2vh;
+  left: 0vw;
+  z-index: 5;
+  cursor: pointer;
 }
 
-/* Keyframes for skalering */ 
-@keyframes pulse-scale { 
-  0%, 100% { transform: scale(1); } /* normal størrelse */ 
-  50% { transform: scale(1.1); } /* 10% større */ 
+.aquaman-cta {
+  font-weight: bold;
+  position: absolute;
+  bottom: 56vh;
+  left: 15vw;
+  font-family: var(--font-body2);
+  font-size: 1.8rem;
+  color: var(--color-orange);
+  cursor: pointer;
+  z-index: 6;
+
+  /* Tynd stroke */
+  text-shadow: -1px -1px 0 #fba55c, 1px -1px 0 #fba55c, -1px 1px 0 #fba55c,
+    1px 1px 0 #fba55c;
+
+  /* Animation for at tiltrække opmærksomhed */
+  display: inline-block;
+  animation: pulse-scale 1.6s ease-in-out infinite;
+}
+
+/* Keyframes for skalering */
+@keyframes pulse-scale {
+  0%,
+  100% {
+    transform: scale(1);
+  } /* normal størrelse */
+  50% {
+    transform: scale(1.1);
+  } /* 10% større */
 }
 
 .aquaman-bubble {
@@ -288,18 +290,17 @@
   left: 13vw;
   width: 250px;
   padding: 20px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   color: #000;
   border-radius: 40px;
   font-family: var(--font-body2);
   font-size: 1.2rem;
   text-align: center;
   z-index: 10;
-
 }
 
 .aquaman-bubble::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%; /* Pil peger nedad */
   left: 50%;
