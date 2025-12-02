@@ -70,9 +70,9 @@ z-index: 0;
 .fish1 {
   position: absolute;
   bottom: 3.5vh;
-  width: calc(var(--fish-w) * 1.2);
+  width: calc(var(--fish-w) * 0.7);
   max-width: max-content;
-  z-index: 2;
+  z-index: 4;
   left: calc(-1 * var(--off-fish1));
   animation: fish1 12s linear infinite;
   cursor: pointer;
