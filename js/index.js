@@ -127,3 +127,21 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
     currentFishSound.play();
   });
 });
+
+// Akvariemandens boble
+const aquaman = document.getElementById("aquaman");
+const cta = document.querySelector(".aquaman-cta");
+const bubble = document.getElementById("aquamanBubble");
+
+// Funktion til at toggle boble
+function toggleBubble() {
+  if (bubble.style.display === "none" || bubble.style.display === "") {
+    bubble.style.display = "block";
+  } else {
+    bubble.style.display = "none";
+  }
+}
+
+// Klik på akvariemanden eller CTA'en viser/skjuler boblen
+aquaman.addEventListener("click", toggleBubble);
+cta.addEventListener("click", toggleBubble);

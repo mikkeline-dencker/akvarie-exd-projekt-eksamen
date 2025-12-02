@@ -281,6 +281,36 @@
   50% { transform: scale(1.1); } /* 10% større */ 
 }
 
+.aquaman-bubble {
+  display: none; /* Starter skjult */
+  position: absolute;
+  bottom: 60vh;
+  left: 18vw;
+  width: 250px;
+  padding: 12px;
+  background-color: #F7F7F7;
+  color: #000;
+  border-radius: 10px;
+  font-family: var(--font-body2);
+  font-size: 1.2rem;
+  text-align: center;
+  z-index: 10;
+
+  /* Pil */
+  position: absolute;
+}
+
+.aquaman-bubble::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Pil peger nedad */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #f0f0f0 transparent transparent transparent;
+}
+
 /* ---------------------------------------------------------
   Pop-up cards styling
 --------------------------------------------------------- */
