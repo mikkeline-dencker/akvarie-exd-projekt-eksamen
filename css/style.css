@@ -35,6 +35,7 @@
 --------------------------------------------------------- */
 .scene {
   position: relative;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   background: linear-gradient(
@@ -45,52 +46,17 @@
 }
 
 /* ---------------------------------------------------------
-  Overlay text style 
---------------------------------------------------------- */
-.overlay-text {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  z-index: 7;
-}
-
-/* ---------------------------------------------------------
-  Font for the heading
---------------------------------------------------------- */
-.overlay-text h1 {
-  font-family: "Irish Grover", cursive;
-  font-size: 2.7rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
-}
-
-/* ---------------------------------------------------------
-  Font for p
---------------------------------------------------------- */
-.overlay-text p {
-  font-family: "Lato", sans-serif;
-  font-size: 1.4rem;
-  opacity: 0.9;
-}
-
-/* ---------------------------------------------------------
    Background styling
 --------------------------------------------------------- */
+
 .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 870px;
-  margin: 0;
-  background: url(../img/bg.png);
-  background-size: 120vw auto;
-  background-position: center bottom;
-  z-index: 0;
+position: absolute;
+bottom: 0%;
+left: 50%;
+transform: translateX(-50%);
+width: 100%;
+height: auto;
+z-index: 0;
 }
 
 /* ---------------------------------------------------------
@@ -233,7 +199,7 @@
 /* Seaweed */
 .fish7 {
   position: absolute;
-  bottom: 13vh;
+  bottom: 6vh;
   width: calc(var(--fish-w) * 1.7);
   max-width: max-content;
   z-index: 3;
@@ -246,7 +212,7 @@
 .aquaman {
   position: absolute;
   width: 40vw;
-  bottom: 2vh;
+  bottom: -8vh;
   left: 0vw;
   z-index: 5;
   cursor: pointer;
@@ -255,7 +221,7 @@
 .aquaman-cta {
   font-weight: bold;
   position: absolute;
-  bottom: 56vh;
+  bottom: 46vh;
   left: 15vw;
   font-family: var(--font-body2);
   font-size: 1.8rem;
@@ -286,7 +252,7 @@
 .aquaman-bubble {
   display: none; /* Starter skjult */
   position: absolute;
-  bottom: 56vh;
+  bottom: 46vh;
   left: 13vw;
   width: 250px;
   padding: 20px;
