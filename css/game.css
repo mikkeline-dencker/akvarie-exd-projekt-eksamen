@@ -5,7 +5,7 @@
 }
 
 #dodger {
-  background-image: url("../img/crab.png");
+  background-image: url("../img/crab.gif");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -18,10 +18,11 @@
   /* baggrundsbillede over gradient (samme rækkefølge) */
   background-image: url("../img/gamebg.svg"),
     linear-gradient(to bottom right, var(--color-water2), var(--color-water1));
-  background-position: center center, center center;
-  background-repeat: no-repeat, no-repeat;
-  /* cover udfylder hele viewport */
-  background-size: cover, cover;
+
+  /* så billedet starter mere midt */
+  background-position: center 78%, center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   width: 100%;
   min-height: 100vh;
