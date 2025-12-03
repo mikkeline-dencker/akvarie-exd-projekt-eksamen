@@ -59,22 +59,32 @@ body {
 
 /*Styling for confetti overlay */
 .confetti-overlay {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
+  position: fixed; /* lægger den oven på hele skærmen */
+  top: 0;
+  left: 0;
+  width: 100vw; /* fylder hele bredden */
+  height: 100vh; /* fylder hele højden */
+  background-size: cover;
   justify-content: center;
-  pointer-events: none;
-  z-index: 9999;
-  background: transparent;
+  align-items: center; /* centerer konfetti-billedet */
+  z-index: 10;
 }
-.confetti-overlay img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+
+.win-card h1 {
+  text-align: center; 
+  font-family: 'Lato', sans-serif;
+  top: 0;
+  left: 0;
+  font-size: 28px;
+  color: white;
 }
-.confetti-overlay.confetti-hide img {
-  opacity: 0;
-  transform: translateY(-8px) scale(1.02);
+
+.win-card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #E01B24; /* rød farve */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
