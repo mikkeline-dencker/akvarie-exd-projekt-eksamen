@@ -57,34 +57,43 @@ body {
   cursor: pointer;
 }
 
-/*Styling for confetti overlay */
+/*Styling for vinder overlay */
 .confetti-overlay {
-  position: fixed; /* lægger den oven på hele skærmen */
-  top: 0;
-  left: 0;
-  width: 100vw; /* fylder hele bredden */
-  height: 100vh; /* fylder hele højden */
-  background-size: cover;
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  width: 100vw;
+  height: 100vh;
+  display: flex; /* sørger for centering */
   justify-content: center;
-  align-items: center; /* centerer konfetti-billedet */
-  z-index: 10;
+  align-items: center;
+  z-index: 1;
+}
+
+/* overlay der centrerer kortet midt på skærmen */
+.win-overlay {
+  position: fixed;
+  inset: 0; 
+  display: flex;
+  align-items: center; /* vertikal centering */
+  justify-content: center; /* horisontal centering */
+  z-index: 2;
+  pointer-events: auto;
 }
 
 .win-card h1 {
-  text-align: center; 
+  text-align: center;
   font-family: 'Lato', sans-serif;
-  top: 0;
-  left: 0;
-  font-size: 28px;
+  font-size: 32px;
   color: white;
 }
 
 .win-card button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  background-color: #E01B24; /* rød farve */
+  padding: 8px 20px;
+  border-radius: 50px;
+  background-color: #E01B24;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
+  border: none;
   cursor: pointer;
+  font-family: 'Lato', sans-serif;
 }
