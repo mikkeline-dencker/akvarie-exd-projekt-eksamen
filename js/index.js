@@ -32,8 +32,8 @@ const fishInfo = {
     text: "Hej! Jeg er en rokke. Jeg er næsten lige så flad som en pandekage, og jeg elsker at gemme mig under sandet. Jeg spiser muslinger og krabber. Mine øjne sidder ovenpå mit hovede, og min mund sidder nedenunder. Jeg har også en lang hale, som kan være giftig, og jeg bruger den til at forsvare mig selv. Jeg kan blive op til 7 meter lang!",
   },
   turtle: {
-    title: "SKILPADDE",
-    text: "Hej! Jeg er en skilpadde. Jeg er et roligt og venligt dyr, som for det meste lever i de varme have. Jeg har ikke specielt travlt i livet - jeg er nemlig ikke hurtig. Men hvis jeg endelig skal skynde mig, kan jeg faktisk svømme hurtigt. Jeg svømmer en hel del og bevæger mig mange kilometer med mine finner.",
+    title: "SKILDPADDE",
+    text: "Hej! Jeg er en skildpadde. Jeg er et roligt og venligt dyr, som for det meste lever i de varme have. Jeg har ikke specielt travlt i livet - jeg er nemlig ikke hurtig. Men hvis jeg endelig skal skynde mig, kan jeg faktisk svømme hurtigt. Jeg svømmer en hel del og bevæger mig mange kilometer med mine finner.",
   },
 };
 
@@ -55,6 +55,9 @@ soundStingray.src = "sound/rokke.wav";
 
 const soundTurtle = new Audio();
 soundTurtle.src = "sound/skilpadde.wav";
+
+const soundAquaman = new Audio();
+soundAquaman.src = "sound/akvariemand.wav";
 
 // Funktion: vis popup med HTML-indhold
 function showFishPopup(html) {
@@ -128,20 +131,22 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
   });
 });
 
-//
+// Henter DOM-elementer til akvariemanden
 const aquaman = document.getElementById("aquaman");
 const cta = document.querySelector(".aquaman-cta");
 const bubble = document.getElementById("aquamanBubble");
 
-// Funktion til at toggle boble
-function toggleBubble() {
-  if (bubble.style.display === "none" || bubble.style.display === "") {
-    bubble.style.display = "block";
-  } else {
-    bubble.style.display = "none";
-  }
-}
+// Når man klikker på manden
+aquaman.addEventListener("click", function() {
+  // Vis boblen
+  bubble.style.display = "block";
 
-// Klik på akvariemanden eller CTA'en viser/skjuler boblen
-aquaman.addEventListener("click", toggleBubble);
-cta.addEventListener("click", toggleBubble);
+  // Spil lyd
+  soundAquaman.currentTime = 0;
+  soundAquaman.play();
+
+  // Skjul boblen igen efter 7 sekunder
+  setTimeout(function() {
+    bubble.style.display = "none";
+  }, 4100);
+});
