@@ -17,6 +17,13 @@ const returnBtn = document.getElementById("back-to-aquarium");
 if (confettiOverlay) confettiOverlay.style.display = "none";
 if (winOverlay) winOverlay.style.display = "none";
 
+// Tilbage til akvariet knap
+if (returnBtn) {
+  returnBtn.addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+}
+
 // Winner sound
 const winningSound = document.getElementById("winningSound");
 
