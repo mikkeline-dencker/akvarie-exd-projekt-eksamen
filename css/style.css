@@ -6,6 +6,7 @@
   --color-water1: #1d5a77;
   --color-water2: #44b9f1;
   --color-orange: #ffc968;
+  --color-darkorange: #fba55c;
 
   /* Billede størrelser (vw) */
   --fish-w: 11vw;
@@ -232,8 +233,9 @@
   z-index: 6;
 
   /* Tynd stroke */
-  text-shadow: -1px -1px 0 #fba55c, 1px -1px 0 #fba55c, -1px 1px 0 #fba55c,
-    1px 1px 0 #fba55c;
+  text-shadow: -1px -1px 0 var(--color-darkorange),
+    1px -1px 0 var(--color-darkorange), -1px 1px 0 var(--color-darkorange),
+    1px 1px 0 var(--color-darkorange);
 
   /* Animation for at tiltrække opmærksomhed */
   display: inline-block;
@@ -288,8 +290,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.35); /* overlay */
-  z-index: 9;
-  padding: 1.25rem;
+  z-index: 10;
 }
 
 /* Gør pop-up teksten Lato */
@@ -307,7 +308,7 @@
   font-size: 1.8rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   color: #000;
   text-transform: uppercase;
 }
@@ -317,38 +318,54 @@
 }
 
 .popupContent {
-  background: #54abb8;
+  position: relative; /* Tilføjet så .closeBtn er inde i card */
+  background: var(--color-orange);
   color: #000;
-  border: 4px solid #0c444c;
-  max-width: 60vw;
+  border: 5px solid var(--color-darkorange);
+  max-width: 580px;
   width: 100%;
-  padding: 2rem;
+  padding: 1.5rem 1.2rem;
   border-radius: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  line-height: 1.4;
+  text-align: left;
+  line-height: 1.5;
 }
 
 .spilleknap {
   margin-top: 1.5rem;
-  padding: 0.6rem 1.3rem;
-  font-family: "Nerko one";
-  font-size: 1.45rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #fff;
   background-color: #e01b24;
   border: none;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  text-decoration: none; /* fjerner den understregede streg */
+  border-radius: 45.6rem;
+  text-decoration: none; /* Fjerner den understregede streg */
+}
+
+.popupContent .spilleknap {
+  position: relative; /* Fjerner fixed-position for knappen i popup */
+  margin-top: 1.5rem; /* Justerer mellemrummet mellem knappen og teksten */
+  display: inline-block; /* Gør elementet til et inline-niveaublokelement så margin-top virker*/
+  left: 50%; /* Placerer knappen i midten*/
+  transform: translateX(-50%);
+  font-family: "nerko one";
+  font-size: 1.5rem;
+  letter-spacing: 2px;
 }
 
 .closeBtn {
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.7rem;
   border-radius: 3rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #b6b6b6;
-  background-color: #476288;
+  background-color: #404040;
   border: none;
   cursor: pointer;
+}
+
+.popupContent .closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
