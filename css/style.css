@@ -7,17 +7,17 @@
   --color-water2: #44b9f1;
   --color-orange: #ffc968;
 
-  /* Billede størrelser (px) */
-  --fish-w: 200px;
+  /* Billede størrelser (vw) */
+  --fish-w: 11vw;
 
-  /* Start /exit offset (px) */
-  --off-fish1: 200px;
-  --off-fish2: 200px;
-  --off-fish3: 200px;
-  --off-fish4: 400px;
-  --off-fish5: 400px;
-  --off-fish6: 200px;
-  --off-fish7: 200px;
+  /* Start /exit offset (vw) */
+  --off-fish1: 30vw;
+  --off-fish2: 28vw;
+  --off-fish3: 32vw;
+  --off-fish4: 40vw;
+  --off-fish5: 36vw;
+  --off-fish6: 26vw;
+  --off-fish7: 22vw;
 }
 
 /* ---------------------------------------------------------
@@ -70,8 +70,8 @@
 .fish1 {
   position: absolute;
   bottom: 3.5vh;
-  width: calc(var(--fish-w) * 0.7);
-  max-width: max-content;
+  width: calc(var(--fish-w) * 0.8);
+  max-width: 18vw;
   z-index: 4;
   left: calc(-1 * var(--off-fish1));
   animation: fish1 12s linear infinite;
@@ -92,8 +92,8 @@
 .fish2 {
   position: absolute;
   bottom: 20vh;
-  width: calc(var(--fish-w) * 1.3);
-  max-width: max-content;
+  width: var(--fish-w);
+  max-width: 20vw;
   z-index: 3;
   left: calc(-1 * var(--off-fish2));
   animation: fish2 18s linear infinite;
@@ -113,9 +113,9 @@
 /* Pufferfish */
 .fish3 {
   position: absolute;
-  bottom: 45vh;
-  width: calc(var(--fish-w) * 1.4);
-  max-width: max-content;
+  bottom: 78vh;
+  width: calc(var(--fish-w) * 0.8);
+  max-width: 22vw;
   z-index: 1;
   right: calc(-1 * var(--off-fish3));
   animation: fish3 25s linear infinite;
@@ -135,9 +135,9 @@
 /* Shark */
 .fish4 {
   position: absolute;
-  bottom: 60vh;
-  width: calc(var(--fish-w) * 1.85);
-  max-width: 30vw;
+  bottom: 65vh;
+  width: calc(var(--fish-w) * 1.9);
+  max-width: 28vw;
   z-index: 3;
   right: calc(-1 * var(--off-fish4));
   animation: fish4 10s linear infinite;
@@ -157,8 +157,8 @@
 /* Stingray */
 .fish5 {
   position: absolute;
-  bottom: 50vh;
-  width: calc(var(--fish-w) * 2);
+  bottom: 55vh;
+  width: calc(var(--fish-w) * 2.1);
   max-width: 30vw;
   z-index: 3;
   left: calc(-1 * var(--off-fish5));
@@ -179,9 +179,9 @@
 /* Turtle */
 .fish6 {
   position: absolute;
-  bottom: 75vh;
-  width: calc(var(--fish-w) * 1.6);
-  max-width: max-content;
+  bottom: 40vh;
+  width: calc(var(--fish-w) * 1.4);
+  max-width: 20vw;
   z-index: 3;
   left: calc(-1 * var(--off-fish6));
   animation: fish6 25s linear infinite;
@@ -202,7 +202,7 @@
   position: absolute;
   bottom: 6vh;
   width: calc(var(--fish-w) * 1.7);
-  max-width: max-content;
+  max-width: 18vw;
   z-index: 3;
   left: 42vw;
 }
@@ -212,9 +212,10 @@
 --------------------------------------------------------- */
 .aquaman {
   position: absolute;
-  width: 40vw;
-  bottom: -8vh;
-  left: 0vw;
+  width: 22vw;
+  max-width: 38rem;
+  bottom: -5vh;
+  left: 9.5vw;
   z-index: 5;
   cursor: pointer;
 }
@@ -222,8 +223,8 @@
 .aquaman-cta {
   font-weight: bold;
   position: absolute;
-  bottom: 46vh;
-  left: 15vw;
+  bottom: 44.5vh;
+  left: 15.5vw;
   font-family: var(--font-body2);
   font-size: 1.8rem;
   color: var(--color-orange);
@@ -255,11 +256,11 @@
   position: absolute;
   bottom: 46vh;
   left: 13vw;
-  width: 250px;
-  padding: 20px;
+  width: min(48vw, 340px);
+  padding: 1.25rem;
   background-color: #f7f7f7;
   color: #000;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   font-family: var(--font-body2);
   font-size: 1.2rem;
   text-align: center;
@@ -272,7 +273,7 @@
   top: 100%; /* Pil peger nedad */
   left: 50%;
   transform: translateX(-50%);
-  border-width: 10px;
+  border-width: 1rem;
   border-style: solid;
   border-color: #f7f7f7 transparent transparent transparent;
 }
@@ -319,9 +320,9 @@
   background: #54abb8;
   color: #000;
   border: 4px solid #0c444c;
-  max-width: 600px;
+  max-width: 60vw;
   width: 100%;
-  padding: 2rem 1.7rem;
+  padding: 2rem;
   border-radius: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   text-align: center;
