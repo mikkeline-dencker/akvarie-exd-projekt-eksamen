@@ -254,9 +254,9 @@
 .aquaman-bubble {
   display: none; /* Starter skjult */
   position: absolute;
-  bottom: 46vh;
-  left: 13vw;
-  width: min(48vw, 340px);
+  bottom: 44.5vh;
+  left: 14vw;
+  width: 15rem;
   padding: 1.25rem;
   background-color: #f7f7f7;
   color: #000;

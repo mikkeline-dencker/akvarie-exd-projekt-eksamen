@@ -13,51 +13,51 @@ const getTurtle = document.getElementById("turtle");
 const fishInfo = {
   crab: {
     title: "KRABBE",
-    text: "Hej! Jeg er en krabbe. Jeg bor på stranden og i vandet, og jeg går sidelæns. Jeg har et hårdt skjold, som beskytter mig, og når jeg vokser, skifter jeg det gamle skjold ud med et nyt. Jeg spiser næsten alt - både planter, små dyr og nogle gange døde fisk. Selv om jeg ser lille ud, kan nogle af mine venner blive over en meter store.",
+    text: "Jeg er en krabbe. Jeg bor på stranden og i vandet, og jeg går sidelæns. Jeg har et hårdt skjold, som beskytter mig, og når jeg vokser, skifter jeg det gamle skjold ud med et nyt. Jeg spiser næsten alt!",
   },
   nemo: {
     title: "KLOVNFISK",
-    text: "Hej! Jeg er en klovnfisk. Jeg er en lille, farverig fisk med orange og hvide striber - næsten som en lille tiger i vandet. Måske har du set mig i filmen Find Nemo? Jeg bor i en søanemone, som har små stikkende arme, men de kan ikke stikke mig, fordi jeg har et særligt slimlag. Jeg elsker at svømme og lege med mine venner!",
+    text: "Jeg er en klovnfisk. Jeg har orange og hvide striber, næsten som en tiger i vandet. Måske har du set mig i filmen Find Nemo? Jeg bor i en søanemone, hvor jeg elsker at svømme og lege med mine venner.",
   },
   pufferfish: {
     title: "PUFFERFISK",
-    text: "Hej! Jeg er en pufferfisk og jeg bliver bogstaveligt talt oppustet, når jeg bliver stresset! Jeg kan blive op til tre gange min normale størrelse, så jeg ligner en ballon - men uden at tage på i vægt! Jeg er super giftig. Ét lille måltid af mig, og du får en evig madforgiftning. Selvom jeg ser sød ud, er jeg faktisk et af havets mest dødelige dyr. Surprise!",
+    text: "Jeg er en pufferfisk, og jeg bliver oppustet, når jeg er stresset! Jeg kan blive op til tre gange min normale størrelse, så jeg ligner en ballon. Selvom jeg ser sød ud, er jeg faktisk et af havets mest dødelige dyr.",
   },
   shark: {
     title: "HVIDHAJ",
-    text: "Hej! Jeg er en hvidhaj. Jeg er en stor fisk, der bor i havet. Jeg har skarpe tænder, og man kalder mig hvidhaj, fordi min mave er lys. Du kan finde mig i varme have over hele verden. Jeg kan svømme meget hurtigt! Selvom jeg ser farlig ud, er jeg mest forvirret. Nogle gange tror jeg, at mennesker er sæler.",
+    text: "Jeg er en hvidhaj. Jeg er en stor fisk, der bor i havet. Du kan finde mig i varme have over hele verden. Jeg kan svømme meget hurtigt! Selvom jeg ser farlig ud, er jeg mest forvirret. Nogle gange tror jeg, at mennesker er sæler.",
   },
   stingray: {
     title: "ROKKE",
-    text: "Hej! Jeg er en rokke. Jeg er næsten lige så flad som en pandekage, og jeg elsker at gemme mig under sandet. Jeg spiser muslinger og krabber. Mine øjne sidder ovenpå mit hovede, og min mund sidder nedenunder. Jeg har også en lang hale, som kan være giftig, og jeg bruger den til at forsvare mig selv. Jeg kan blive op til 7 meter lang!",
+    text: "Jeg er en rokke. Jeg er næsten lige så flad som en pandekage, og jeg elsker at gemme mig under sandet. Jeg har en lang hale, som kan være giftig, og jeg bruger den til at forsvare mig selv.",
   },
   turtle: {
     title: "SKILDPADDE",
-    text: "Hej! Jeg er en skildpadde. Jeg er et roligt og venligt dyr, som for det meste lever i de varme have. Jeg har ikke specielt travlt i livet - jeg er nemlig ikke hurtig. Men hvis jeg endelig skal skynde mig, kan jeg faktisk svømme hurtigt. Jeg svømmer en hel del og bevæger mig mange kilometer med mine finner.",
+    text: "Jeg er en skildpadde. Jeg er et roligt og venligt dyr, som for det meste lever i de varme have. Jeg har ikke specielt travlt i livet - jeg er nemlig ikke hurtig. Men hvis jeg endelig skal skynde mig, kan jeg svømme ret hurtigt!",
   },
 };
 
 // Opretter et lyd-objekt og tildeler source til den specifikke lydfil i mappen "sound"
 const soundCrab = new Audio();
-soundCrab.src = "sound/krabbe.wav";
+soundCrab.src = "sound/crab.wav";
 
 const soundNemo = new Audio();
 soundNemo.src = "sound/nemo.wav";
 
 const soundPuffer = new Audio();
-soundPuffer.src = "sound/pufferfisk.wav";
+soundPuffer.src = "sound/pufferfish.wav";
 
 const soundShark = new Audio();
-soundShark.src = "sound/hvidhaj.wav";
+soundShark.src = "sound/shark.wav";
 
 const soundStingray = new Audio();
-soundStingray.src = "sound/rokke.wav";
+soundStingray.src = "sound/stingray.wav";
 
 const soundTurtle = new Audio();
-soundTurtle.src = "sound/skilpadde.wav";
+soundTurtle.src = "sound/turtle.wav";
 
 const soundAquaman = new Audio();
-soundAquaman.src = "sound/akvariemand.wav";
+soundAquaman.src = "sound/aquaman.wav";
 
 // Funktion: vis popup med HTML-indhold
 function showFishPopup(html) {
@@ -86,14 +86,7 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
 
 // Binder click-handlere til alle fisk ved at bruge deres id'er
 // Når der klikkes, hentes teksten fra fishInfo og sendes til showFishPopup
-[
-  "crab",
-  "nemo",
-  "pufferfish",
-  "shark",
-  "stingray",
-  "turtle",
-].forEach((id) => {
+["crab", "nemo", "pufferfish", "shark", "stingray", "turtle"].forEach((id) => {
   const el = document.getElementById(id);
   if (!el) return;
   el.addEventListener("click", () => {
@@ -108,22 +101,22 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
     }
     switch (id) {
       case "crab":
-        currentFishSound = new Audio("sound/krabbe.wav");
+        currentFishSound = new Audio("sound/crab.wav");
         break;
       case "nemo":
         currentFishSound = new Audio("sound/nemo.wav");
         break;
       case "pufferfish":
-        currentFishSound = new Audio("sound/pufferfisk.wav");
+        currentFishSound = new Audio("sound/pufferfish.wav");
         break;
       case "shark":
-        currentFishSound = new Audio("sound/hvidhaj.wav");
+        currentFishSound = new Audio("sound/shark.wav");
         break;
       case "stingray":
-        currentFishSound = new Audio("sound/rokke.wav");
+        currentFishSound = new Audio("sound/stingray.wav");
         break;
       case "turtle":
-        currentFishSound = new Audio("sound/skilpadde.wav");
+        currentFishSound = new Audio("sound/turtle.wav");
         break;
     }
     // Afspil lyd
@@ -137,7 +130,7 @@ const cta = document.querySelector(".aquaman-cta");
 const bubble = document.getElementById("aquamanBubble");
 
 // Når man klikker på manden
-aquaman.addEventListener("click", function() {
+aquaman.addEventListener("click", function () {
   // Vis boblen
   bubble.style.display = "block";
 
@@ -146,7 +139,7 @@ aquaman.addEventListener("click", function() {
   soundAquaman.play();
 
   // Skjul boblen igen efter 7 sekunder
-  setTimeout(function() {
+  setTimeout(function () {
     bubble.style.display = "none";
   }, 4100);
 });
