@@ -215,7 +215,7 @@
   position: absolute;
   width: 22vw;
   max-width: 38rem;
-  bottom: -5vh;
+  bottom: -5.7vh;
   left: 9.5vw;
   z-index: 5;
   cursor: pointer;
@@ -224,7 +224,7 @@
 .aquaman-cta {
   font-weight: bold;
   position: absolute;
-  bottom: 44.5vh;
+  bottom: 44vh;
   left: 15.5vw;
   font-family: var(--font-body2);
   font-size: 1.8rem;
@@ -256,10 +256,10 @@
 .aquaman-bubble {
   display: none; /* Starter skjult */
   position: absolute;
-  bottom: 44.5vh;
+  bottom: 44vh;
   left: 14vw;
   width: 15rem;
-  padding: 1.25rem;
+  padding: 1.5rem;
   background-color: #f7f7f7;
   color: #000;
   border-radius: 2.5rem;

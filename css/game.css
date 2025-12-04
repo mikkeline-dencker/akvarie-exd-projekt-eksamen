@@ -49,10 +49,10 @@ body {
 
 #homeBTN {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 85px;
-  height: 85px;
+  bottom: 0.9rem;
+  left: 1.5rem;
+  width: 5.3rem;
+  height: 5.3rem;
   background-size: cover;
   cursor: pointer;
 }
@@ -85,7 +85,7 @@ body {
   font-family: "Nerko One";
   font-size: 64px;
   color: white;
-    /* Tynd stroke */
+  /* Tynd stroke */
   text-shadow: -2.5px -2.5px 0 black, 2.5px -2.5px 0 black, -2.5px 2.5px 0 black,
     2.5px 2.5px 0 black;
 }
