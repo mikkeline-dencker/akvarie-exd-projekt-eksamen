@@ -229,7 +229,6 @@
   font-family: var(--font-body2);
   font-size: 1.8rem;
   color: var(--color-orange);
-  cursor: pointer;
   z-index: 6;
 
   /* Tynd stroke */
@@ -242,7 +241,7 @@
   animation: pulse-scale 1.6s ease-in-out infinite;
 }
 
-/* Keyframes for skalering */
+ /* Animationens ændringer over tid */
 @keyframes pulse-scale {
   0%,
   100% {
